@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins-Bold', sans-serif;
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBoldItalic";
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body{
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: fit-content;
+    color: hsl(0, 0%, 8%);
+    background: hsl(0, 0%, 94%);
+}
+
+.container{
+    max-width: 1200px;
+    min-width: 50%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.box{
+    border: 2px solid white;
+    height: 625px;
+    box-shadow: 0 0 2px hsl(0, 0%, 94%);
+    border-radius: 20px 20px 90px 20px;
+    padding: 1.2rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+form{
+    padding-top: 40px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.label{
+    margin-right: 60px;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 1px;
+}
+.label:nth-child(2){
+    margin-left: 20px;
+}
+
+.input{
+    margin-top: 0.3rem;
+    width: 6.50rem;
+    height: 63px;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 86%);
+    font-size: 1.8rem;
+    padding: 15px;
+}
+
+.submit{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    background-color: hsl(259, 100%, 65%);
+    background-image: url(assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    top: 220px;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+.divider{
+    border: 1px solid hsl(0, 0%, 86%);
+    margin-top: 100px;
+    width: 100%;
+}
+
+.timespan{
+    font-family: 'Poppins-ExtraBoldItalic', sans-serif;
+    font-style: italic;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-top: 60px;
+    line-height: 1.5;
+    padding: 0 20px;
+    color: hsl(0, 0%, 8%);
+}
+
+.number {
+    color: hsl(259, 100%, 65%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution{
+    display: none;
+}
