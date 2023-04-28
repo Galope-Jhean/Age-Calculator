@@ -33,8 +33,7 @@ let getDate = (dayValue, monthValue, yearValue, currentYear, currentMonth, curre
     if (dayValue > currentDay){
         return [(currentDay += daysoftheMonths[currentMonth-1]) - dayValue, (currentMonth -= 1) - monthValue, currentYear - yearValue];
     }
-    if(monthValue - currentMonth){
-        console.log('happe');
+    if(monthValue > currentMonth){
         return [currentDay - dayValue, ((currentMonth += 12) - monthValue), (currentYear -= 1) - yearValue];
     }
     
