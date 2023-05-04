@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: "Poppins";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
     font-family: "Poppins-ExtraBoldItalic";
     src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
 }
@@ -75,11 +80,20 @@ form{
     padding: 15px;
 }
 
+.error{
+    margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-size: 0.6rem;
+    color: red;
+}
+
 .submit{
     width: 80px;
     height: 80px;
     border-radius: 50%;
     border: none;
+    z-index: 1;
     position: absolute;
     background-color: hsl(259, 100%, 65%);
     background-image: url(assets/images/icon-arrow.svg);
@@ -94,8 +108,9 @@ form{
 
 .divider{
     border: 1px solid hsl(0, 0%, 86%);
-    margin-top: 100px;
-    width: 100%;
+    bottom: 383px;
+    width: 85%;
+    position: fixed;
 }
 
 .timespan{
@@ -103,7 +118,7 @@ form{
     font-style: italic;
     font-size: 3.5rem;
     font-weight: 800;
-    margin-top: 60px;
+    margin-top: 150px;
     line-height: 1.5;
     padding: 0 20px;
     color: hsl(0, 0%, 8%);
