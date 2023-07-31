@@ -8,6 +8,7 @@ const dayDisplay = document.querySelector('.numberDays');
 const dayError = document.querySelector('.day-error');
 const monthError = document.querySelector('.month-error');
 const yearError = document.querySelector('.year-error');
+const invalidDate = document.querySelector('.invalid');
 
 const daysoftheMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -34,6 +35,9 @@ day.addEventListener('keydown', () => {
             day.style.border = '1px solid red';
         }
     }
+
+    invalidDate.textContent = "";
+    invalidDate.style.display = none;
     
 })
 
@@ -60,6 +64,9 @@ month.addEventListener('keydown', () => {
         dayError.textContent = '';
         day.style.border = '1px solid hsl(0, 0%, 86%)';
     }
+
+    invalidDate.textContent = "";
+    invalidDate.style.display = none;
 })
 
 year.addEventListener('keydown', () => {
@@ -67,10 +74,17 @@ year.addEventListener('keydown', () => {
     const date = new Date();
     let currentYear = date.getFullYear(); 
 
+ 
+
     if(yearStr == ''){
         yearError.textContent = 'Year can\'t be empty';
         year.style.border = '1px solid red';
-    } 
+    }
+    
+    if(yearStr!=''){
+        yearError.textContent = '';
+        year.style.border = '1px solid hsl(0, 0%, 86%)';
+    }
 
     if(yearStr.length > 4 || year.value > currentYear){
         yearError.textContent = "year is invalid";
@@ -80,6 +94,9 @@ year.addEventListener('keydown', () => {
         yearError.textContent = '';
         year.style.border = '1px solid hsl(0, 0%, 86%)';
     }
+
+    invalidDate.textContent = "";
+    invalidDate.style.display = none;
 })
 
 submit.addEventListener("click", () => {
@@ -98,20 +115,32 @@ submit.addEventListener("click", () => {
         yearDisplay.textContent = dates[2];
         monthDisplay.textContent = dates[1];
         dayDisplay.textContent = dates[0];
-    } else if(day.value == '' || month.value == '' ||  year.value == ''){
+
+        invalidDate.textContent = "";
+        invalidDate.style.display = none;
+    }
+    
+    if(day.value == '' || month.value == '' ||  year.value == ''){
         dayError.textContent = "Day can't be empty";
         monthError.textContent = "month can't be empty";
         yearError.textContent = 'Year can\'t be empty';
         year.style.border = '1px solid red';
         day.style.border = '1px solid red';
         month.style.border = '1px solid red';
-    } else {
+    } 
+    
+    if (day.value != '' || month.value != '' ||  year.value != '') {
         dayError.textContent = '';
         day.style.border = '1px solid hsl(0, 0%, 86%)';
         yearError.textContent = '';
         year.style.border = '1px solid hsl(0, 0%, 86%)';
         monthError.textContent = '';
         month.style.border = '1px solid hsl(0, 0%, 86%)';
+    }
+
+    if(!isValid(day.value, month.value, year.value)){
+        invalidDate.textContent = "Date must be valid";
+        invalidDate.style.display = block;
     }
 
 })

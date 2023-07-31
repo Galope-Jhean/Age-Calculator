@@ -86,12 +86,18 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }   
 
-.error{
+.error, .invalid{
     margin-top: 5px;
     font-family: "Poppins", sans-serif;
     font-style: italic;
     font-size: 0.6rem;
     color: red;
+}
+
+.invalid{
+    font-size: 0.8rem;
+    position: absolute;
+    top: 30px;
 }
 
 .submit{
