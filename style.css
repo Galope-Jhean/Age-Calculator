@@ -80,6 +80,12 @@ form{
     padding: 15px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}   
+
 .error{
     margin-top: 5px;
     font-family: "Poppins", sans-serif;
@@ -130,4 +136,30 @@ form{
 
 .attribution{
     display: none;
+}
+
+@media (min-width: 768px) {
+
+    .divider{
+        bottom: 320px;
+        left: 50px;
+    }
+
+    .submit{
+        top: 160px;
+        right: 60px;
+    }
+
+    .box{
+        height: 500px;
+        width: 700px;
+    }
+
+    .input{
+        width: 8.50rem;
+    }
+
+    .timespan{
+        margin-top: 50px;
+    }
 }
