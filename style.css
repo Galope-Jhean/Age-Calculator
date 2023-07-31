@@ -169,3 +169,25 @@ input::-webkit-inner-spin-button {
         margin-top: 50px;
     }
 }
+
+@media (min-width: 1400px) {
+   
+    .divider{
+        bottom: 320px;
+        width: 680px;
+        left: 170px;
+    }
+
+    .box{
+        height: 500px;
+        width: 800px;
+        margin-left: 120px;
+    }
+}
+
+@media (min-width: 2000px) {
+   
+    .submit{
+        right: 150px;
+    }
+}
